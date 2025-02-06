@@ -32,4 +32,34 @@
   text-decoration: none;
   color:black;
 }
+/* Support page css */
+#supportHero{
+  background-color:#397ed1 ;
+  color:white;
+  
+}
+
+#supportHeroLeft a, #supportHeroRight a{
+  color:white;
+  margin-left:2rem;
+  margin-top:5rem;
+}
+
+#supportWrapper{
+  display:flex;
+  justify-content: space-around;
+  
+
+}
+
+#supportHeroLeft input{
+  padding:20px 50px;
+  width:100%;
+  font-size: 20px;
+  border:none;
+  border-radius: 10px;
+  margin-top:1.3rem;
+  margin-bottom:1.3rem;
+
+}
 

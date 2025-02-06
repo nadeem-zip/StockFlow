@@ -46,7 +46,7 @@ let Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/support">
+                <Link className="nav-link active" to="/support">
                  Support
                 </Link>
               </li>
