@@ -1,11 +1,14 @@
 const {Schema}= require('mongoose');
 
-const HoldingsSchema=new Schema({
+const PositionsSchema=new Schema({
+    product: {
+        type:String,
+    },
     name: {
         type:String,
     },
-    qty: {
-        type:Number,
+    qty:{
+            type:Number,
     },
     avg: {
         type:Number,
@@ -21,8 +24,7 @@ const HoldingsSchema=new Schema({
     },
     isLoss:{
         type:Boolean,
-        default:false,
-    }
+    },
 })
 
-module.exports={HoldingsSchema}
+module.exports={PositionsSchema}

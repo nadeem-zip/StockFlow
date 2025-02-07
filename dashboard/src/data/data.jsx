@@ -64,6 +64,7 @@ export const watchlist = [
       price: 541.15,
       net: "+0.58%",
       day: "+2.99%",
+      isLoss:false,
     },
     {
       name: "HDFCBANK",
@@ -72,6 +73,7 @@ export const watchlist = [
       price: 1522.35,
       net: "+10.04%",
       day: "+0.11%",
+      isLoss:false,
     },
     {
       name: "HINDUNILVR",
@@ -80,6 +82,7 @@ export const watchlist = [
       price: 2417.4,
       net: "+3.49%",
       day: "+0.21%",
+      isLoss:false,
     },
     {
       name: "INFY",
@@ -97,6 +100,7 @@ export const watchlist = [
       price: 207.9,
       net: "+2.92%",
       day: "+0.80%",
+      isLoss:false,
     },
     {
       name: "KPITTECH",
@@ -105,6 +109,7 @@ export const watchlist = [
       price: 266.45,
       net: "+6.45%",
       day: "+3.54%",
+      isLoss:false
     },
     {
       name: "M&M",
@@ -122,6 +127,7 @@ export const watchlist = [
       price: 2112.4,
       net: "-3.71%",
       day: "+1.44%",
+      isLoss:false,
     },
     {
       name: "SBIN",
