@@ -1,4 +1,5 @@
 import React,{ useEffect,useState } from "react";
+import { VerticalGraph } from "./VerticalGraph";
 // import {holdings} from "../data/data";
 import axios from "axios";
 const Holdings = () => {
@@ -9,6 +10,18 @@ const Holdings = () => {
     })
 
   },[])
+  const labels = allHoldings.map((subArray) => subArray["name"]);
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Stock Price",
+        data: allHoldings.map((stock) => stock.price),
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
   return (
     <>
       <h3 className="item">Holdings ({allHoldings.length})</h3>
@@ -64,6 +77,7 @@ const Holdings = () => {
           <p>P&L</p>
         </div>
       </div>
+      <VerticalGraph data={data} />
     </>
   );
 };

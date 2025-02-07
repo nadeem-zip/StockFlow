@@ -3,6 +3,7 @@ const express=require("express");
 const mongoose=require('mongoose');
 const {HoldingsModel} = require('./models/HoldingsModel')
 const {PositionsModel}=require('./models/PositionsModel')
+const {OrdersModel} = require('./models/OrdersModel')
 const cors = require('cors');
 const bodyParser= require('body-parser');
 
@@ -191,7 +192,21 @@ app.get('/allPositions', async(req,res)=>{
     let allPositions = await PositionsModel.find({});
     res.json(allPositions);
 })
-
+ 
+app.post('/newOrder',(req,res)=>{
+    console.log("newOrders triggered")
+    console.log(req.body.name);
+    console.log(req.body.price);
+    let newOrder = new OrdersModel({
+        name: req.body.name,
+        qty:req.body.qty,
+        price:req.body.price,
+        mode:req.body.mode,
+    });
+    console.log(newOrder);
+    newOrder.save();
+    res.send("Done !")
+})
 
 app.listen(PORT,()=>{
     console.log(`App started at port : ${PORT}`);
